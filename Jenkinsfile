@@ -18,15 +18,8 @@ pipeline {
                 echo 'deploy to production server only if branch is master'
             }
         }
-        stage('Example Username/Password') {
-            environment {
-                SERVICE_CREDS = credentials('jkey')
-            }
-            steps {
-                sh 'echo "Service user is $SERVICE_CREDS_USR"'
-                sh 'echo "Service password is $SERVICE_CREDS_PSW"'
-                sh 'curl -u $SERVICE_CREDS https://gitbub.com'
-            }
+        stage('Checkout') {
+           git branch: 'master', credentialsId: '204c40a298982e278e342bb6d3f0fb2831ad899f', url: 'git@github.com:/surajm2021/cicd-pipeline-train-schedule-pipelines/blob/master/Jenkinsfile'
         }
 
     }
