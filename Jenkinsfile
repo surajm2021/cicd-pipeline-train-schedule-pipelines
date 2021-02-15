@@ -13,9 +13,6 @@ pipeline {
             }
         }
         stage('deploy to production server'){
-            when{
-                branch 'master' 
-            }
             steps{
                 input 'Does the staging environment look OK?'
                 milestone(1)
