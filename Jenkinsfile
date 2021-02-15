@@ -20,7 +20,14 @@ pipeline {
         }
         stage('Checkout') {
             steps{
-                 git branch: 'master', credentialsId: 'jkey', url: 'git@github.com:/surajm2021/cicd-pipeline-train-schedule-pipelines/blob/master/Jenkinsfile'
+                 withCredentials([usernamePassword(credentialsId: 'jkey', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+                 
+                  sh 'echo $PASSWORD'
+                  
+                  echo USERNAME
+               
+                  echo "username is $USERNAME"
+                }
              }
         }
     }
