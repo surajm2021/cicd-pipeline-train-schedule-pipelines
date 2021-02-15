@@ -14,8 +14,7 @@ pipeline {
         }
         stage('deploy to production server'){
             steps{
-                input 'Does the staging environment look OK?'
-                milestone(1)
+             
                 echo 'deploy to production server only if branch is master'
             }
         }
