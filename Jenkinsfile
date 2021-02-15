@@ -19,8 +19,9 @@ pipeline {
             }
         }
         stage('Checkout') {
-           git branch: 'master', credentialsId: '204c40a298982e278e342bb6d3f0fb2831ad899f', url: 'git@github.com:/surajm2021/cicd-pipeline-train-schedule-pipelines/blob/master/Jenkinsfile'
+            steps{
+                 git branch: 'master', credentialsId: '204c40a298982e278e342bb6d3f0fb2831ad899f', url: 'git@github.com:/surajm2021/cicd-pipeline-train-schedule-pipelines/blob/master/Jenkinsfile'
+             }
         }
-
     }
 }
