@@ -20,7 +20,7 @@ pipeline {
         }
         stage('Example Username/Password') {
             environment {
-                SERVICE_CREDS = credentials('github_key')
+                SERVICE_CREDS = credentials('jkey')
             }
             steps {
                 sh 'echo "Service user is $SERVICE_CREDS_USR"'
