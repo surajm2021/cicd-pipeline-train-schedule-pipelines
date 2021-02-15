@@ -20,7 +20,7 @@ pipeline {
         }
         stage('Checkout') {
             steps{
-                 withCredentials([usernamePassword(credentialsId: 'jkey', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+                 withCredentials([usernamePassword(credentialsId: 'git_hub_login', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
                  
                   sh 'echo $PASSWORD'
                   
