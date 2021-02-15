@@ -31,7 +31,7 @@ pipeline {
           
                sh "git branch -a"
 
-               sh "git checkout branchname"
+               sh "git checkout master"
                 }
              }
         }
