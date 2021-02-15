@@ -25,7 +25,7 @@ pipeline {
                   sh 'echo $PASSWORD'
                   
                   echo USERNAME
-               
+                  sh 'git clone https://github.com/surajm2021/shirapur-website'
                   echo "username is $USERNAME"
                 }
              }
